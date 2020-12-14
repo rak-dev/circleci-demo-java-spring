@@ -1,7 +1,7 @@
 version: 2
 jobs:
   build:
-    machine: true
+    #machine: true
     environment:
       # Configure the JVM and Gradle to avoid OOM errors
       _JAVA_OPTIONS: "-Xmx3g"
@@ -16,8 +16,7 @@ jobs:
           key: v1-gradle-cache-{{ checksum "build.gradle" }}
       - setup_remote_docker:
           version: 19.03.13
-      - run: |
-          echo "$DOCKER_PASS" | docker login --username $DOCKER_USER --password-stdin
+      - run: | ssh remote-docker \ echo "this echo command will be executed in the remote Docker environment rather than the initial job container itself"
       - run:
           name: Install dependencies
           command: ./gradlew build -x test
