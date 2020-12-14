@@ -15,8 +15,8 @@ jobs:
           key: v1-gradle-cache-{{ checksum "build.gradle" }}
       - setup_remote_docker:
           version: 19.03.13
-      - run:
-          command: ssh remote-docker  
+      - run: |
+          echo "$DOCKER_PASS" | docker login --username $DOCKER_USER --password-stdin
       - run:
           name: Install dependencies
           command: ./gradlew build -x test
