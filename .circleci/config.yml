@@ -16,7 +16,7 @@ jobs:
           key: v1-gradle-cache-{{ checksum "build.gradle" }}
       - setup_remote_docker:
           version: 19.03.13
-      - run: | ssh remote-docker \ echo "this echo command will be executed in the remote Docker environment rather than the initial job container itself"
+      - run: | ssh remote-docker echo "this echo command will be executed in the remote Docker environment rather than the initial job container itself"
       - run:
           name: Install dependencies
           command: ./gradlew build -x test
