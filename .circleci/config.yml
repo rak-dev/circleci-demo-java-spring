@@ -48,9 +48,10 @@ jobs:
             #sudo apt-get update
             sudo apt-get install mosquitto -y
             sudo apt-get install mosquitto-clients -y
-            sudo mosquitto_passwd -c /etc/mosquitto/passwd dave
-            send "Kizora@123"
-            send "Kizora@123"
+            sudo mosquitto_sub -t "test"
+            sudo mosquitto_pub -m "message from mosquitto_pub client" -t "test"
+            #sudo mosquitto_passwd -c /etc/mosquitto/passwd dave
+           
       - run:
           name: Install dependencies
           command: ./gradlew build -x test
