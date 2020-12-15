@@ -19,8 +19,8 @@ jobs:
       - setup_remote_docker:
           version: 19.03.13
       - run:
-        name: Install Software In Docker
-        command: apt-get update
+          name: Install Software In Docker
+          command: apt-get update
       - run:
           name: Install dependencies
           command: ./gradlew build -x test
