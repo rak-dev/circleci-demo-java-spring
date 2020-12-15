@@ -24,14 +24,14 @@ jobs:
             sudo apt-get update
             #sudo apt-get install nano -y
             #sudo apt-get install -y apt-utils
-            #sudo apt-get install -y gnupg
-            #sudo apt-get install -y gnupg2
-            #sudo apt-get install software-properties-common -y
+            sudo apt-get install -y gnupg
+            sudo apt-get install -y gnupg2
+            sudo apt-get install software-properties-common -y
             #sudo apt-get install -y net-tools
-            #sudo apt-get install -y wget
-            #sudo apt-get install -y curl
+            sudo apt-get install -y wget
+            sudo apt-get install -y curl
             #sudo apt-get install -y iputils-ping
-            #sudo apt-get -y upgrade
+            sudo apt-get -y upgrade
             #sudo apt-get install -y openssh-server
             #sudo apt-get install -y git
             #sudo apt-get install -y vsftpd
