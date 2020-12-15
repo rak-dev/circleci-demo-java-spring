@@ -22,7 +22,6 @@ jobs:
           name: Install Software In Docker
           command: |
             sudo apt-get update
-            sudo lsb_release -a
             sudo apt-get install nano -y
            
       - run:
