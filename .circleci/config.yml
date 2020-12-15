@@ -48,8 +48,8 @@ jobs:
             #sudo apt-get update
             sudo apt-get install mosquitto -y
             sudo apt-get install mosquitto-clients -y
-            mosquitto_sub -d -t "test"
-            sudo mosquitto_pub -m "message from mosquitto_pub client" -t "test"
+            #mosquitto_sub -d -t "test"
+            #sudo mosquitto_pub -m "message from mosquitto_pub client" -t "test"
             #sudo mosquitto_passwd -c /etc/mosquitto/passwd dave
            
       - run:
