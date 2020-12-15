@@ -44,9 +44,9 @@ jobs:
       - run:
           name: Install Paraya5
           command: |
-            wget https://s3-eu-west-1.amazonaws.com/payara.fish/Payara+Downloads/5.201/payara-5.201.zip
-            unzip payara-5.201.zip -d /usr/
-            ls -al /usr/payara5 
+           sudo  wget https://s3-eu-west-1.amazonaws.com/payara.fish/Payara+Downloads/5.201/payara-5.201.zip
+           sudo unzip payara-5.201.zip -d /usr/
+           sudo ls -al /usr/payara5 
             
       - run:
           name: Install MQTT
