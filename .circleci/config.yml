@@ -41,11 +41,12 @@ jobs:
             sudo apt-get install -y mysql-server
             sudo apt-get install -y maven
       - run:
-          name: Install Payara Server
+          name: Install MQTT
           command: |
-            wget -O /home/Download/payara-5.201.zip https://s3-eu-west-1.amazonaws.com/payara.fish/Payara+Downloads/5.201/payara-5.201.zip
-            unzip /home/Download/payara-5.201.zip -d /usr/
-            ls -al /usr/payara5
+            sudo apt-add-repository ppa:mosquitto-dev/mosquitto-ppa
+            sudo apt-get update
+            sudo apt-get install mosquitto
+            sudo apt-get install mosquitto-clients
       - run:
           name: Install dependencies
           command: ./gradlew build -x test
