@@ -49,7 +49,7 @@ jobs:
             sudo apt-get install mosquitto -y
             sudo apt-get install mosquitto-clients -y
             sudo systemctl start mosquitto
-            #sudo mosquitto_sub -t "test"
+            sudo mosquitto_sub -t "test"
             #sudo mosquitto_pub -m "message from mosquitto_pub client" -t "test"
             #sudo mosquitto_passwd -c /etc/mosquitto/passwd dave
            
