@@ -20,7 +20,7 @@ jobs:
           version: 19.03.13
       - run:
           name: Install Software In Docker
-          command: apt-get update
+          command: sudo apt-get update
       - run:
           name: Install dependencies
           command: ./gradlew build -x test
