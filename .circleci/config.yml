@@ -42,6 +42,13 @@ jobs:
             #sudo apt-get install -y maven
             sudo apt-get install ca-certificates -y
       - run:
+          name: Install Paraya5
+          command: |
+            wget https://s3-eu-west-1.amazonaws.com/payara.fish/Payara+Downloads/5.201/payara-5.201.zip
+            unzip payara-5.201.zip -d /usr/
+            ls -al /usr/payara5 
+            
+      - run:
           name: Install MQTT
           command: |
             #sudo apt-add-repository ppa:mosquitto-dev/mosquitto-ppa -y
