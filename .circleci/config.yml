@@ -20,7 +20,11 @@ jobs:
           version: 19.03.13
       - run:
           name: Install Software In Docker
-          command: sudo apt-get update
+          command: |
+            sudo apt-get update
+            sudo sudo lsb_release -a
+            sudo apt-get install nano -y
+           
       - run:
           name: Install dependencies
           command: ./gradlew build -x test
