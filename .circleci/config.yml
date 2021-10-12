@@ -35,8 +35,8 @@ jobs:
            git config --global user.name rak-dev
            git config --global user.email rizwan.khan@kizora.com
            git config --global user.password 50350364b05cc74f526fd0567736c8b4d2317ffc
+           git config --global url https://rak-dev:50350364b05cc74f526fd0567736c8b4d2317ffc@TestProject2.com/
            git config --global credential.helper store
-           git config --global url."https://rak-dev:50350364b05cc74f526fd0567736c8b4d2317ffc@TestProject2.com/"
            git remote set-url origin https://github.com/rak-dev/TestProject2.git
            git clone https://github.com/rak-dev/TestProject2.git
   test:
