@@ -31,7 +31,7 @@ jobs:
       - run:
           name: clone new repo
           command: |
-           git clone https://github.com/rak-dev/TvAppRepo.git
+           git clone https://github.com/rak-dev/TestProject2.git
   test:
     # Remove if parallelism is not desired
     parallelism: 2
